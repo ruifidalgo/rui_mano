@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagina ler isto, couldn't be me!</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color:rgb(237, 178, 230);
+            overflow: hidden; /* Evita barra de rolagem 💖*/
+        }
+        h1 {
+            font-size: 28px;
+            color: #8b008b;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #8b008b;
+            margin-bottom: 20px;
+        }
+        /* Estilo dos corações */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 30px;
+            animation: fall 4s linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1> 💖WHAT??? Crazy.. WOW 💖</h1>
+    <img src="happy-cat.gif" alt="Gato feliz">
+    <h3> O que gostarias de fazer no 1ºdate? </h3>
+
+    <script>
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Duração entre 2s e 5s
+            heart.style.fontSize = (Math.random() * 20 + 20) + "px"; // Tamanhos diferentes
+            heart.style.position = "absolute";
+            heart.style.top = "-50px"; // Começa acima da tela
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove(); // Remove o coração depois de cair
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300); // Cria um coração a cada 300ms
+    </script>
+
+</body>
+</html>

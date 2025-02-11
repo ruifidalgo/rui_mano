@@ -1,0 +1,117 @@
+ /* Centraliza tudo na página */
+ body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgb(237, 178, 230);
+    text-align: center;
+    position: relative;
+}
+
+/* Estilização da Imagem */
+img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilização do Título */
+h1 {
+    font-size: 28px;
+    color: #8b008b;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+
+/* Botão "SIM" */
+.yes-button {
+    background-color: #19f645;
+    color: white;
+    animation: bounce 1s infinite;
+    padding: 15px 30px;
+    top: 55%;
+    left: 70%;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+/* Botão "NÃO" */
+.no-button {
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Movimento rápido durante o hover */
+}
+
+.no-button:hover {
+    transition: all 0.1s ease; /* Garantir transição rápida */
+    
+}
+
+.yes-button:hover {
+    background-color: rgb(25, 167, 25);
+}
+/* Botão "Dá-me tempo para pensar" */
+.think-button {
+    background-color: #853589;
+    color: white;
+    font-weight: bold;
+    margin-top: 60px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.think-button:hover {
+    background-color: #661d6b;
+}
+
+
+/* Animação de Pulo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ------------------------------*/
+
+
+ @keyframes fall {
+        from { transform: translateY(-100vh); }
+        to { transform: translateY(100vh); }
+    }
+    .heart {
+        position: absolute;
+        color: red;
+        font-size: 30px;
+        animation: fall 3s linear infinite;
+    }

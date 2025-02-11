@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Diz sim Bea pls</title>
+    
+</head> 
+<body>
+
+    <img src="cat.gif" alt="Cute Cat">
+    <h1>Gostarias de ser o meu Valentim?</h1>
+
+    <button class="yes-button" onclick="redirecionar1()">SIM!</button>
+    <button class="think-button" onclick="redirecionar2()">Presiso de pensar</button>
+    <button class="no-button" id="noButton">NÃO</button>
+    
+    <script>
+        const noButton = document.getElementById('noButton');
+
+        noButton.addEventListener('mouseenter', () => {
+            // Obtém as dimensões da janela (para não sair dos limites da tela)
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            // Gera as coordenadas aleatórias dentro da janela
+            const randomX = Math.random() * (windowWidth - noButton.offsetWidth); // largura aleatória
+            const randomY = Math.random() * (windowHeight - noButton.offsetHeight); // altura aleatória
+
+            // Muda a posição do botão para as coordenadas aleatórias
+            noButton.style.top = `${randomY}px`;
+            noButton.style.left = `${randomX}px`;
+        });
+
+        
+        function redirecionar1() {
+        window.location.href = "feliz.html"; // Redireciona para a nova página
+        }
+
+        function redirecionar2() {
+        alert("Demora o tempo que precisares!!!")
+        }
+
+    
+    </script>
+
+
+
+</body>
+</html>
